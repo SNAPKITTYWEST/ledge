@@ -1,0 +1,30 @@
+{
+  "name": "@snapkitty/ledge",
+  "version": "0.1.0",
+  "description": "Sovereign audit chain SDK — SHA-256 hash-linked append-only audit trail for AI agents and financial systems",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "files": ["dist", "pkg", "src/lib.rs", "Cargo.toml"],
+  "scripts": {
+    "build:wasm": "wasm-pack build --features wasm --target bundler --out-dir pkg",
+    "build:js":   "tsup js/index.ts --format cjs,esm --dts --out-dir dist",
+    "build":      "npm run build:wasm && npm run build:js",
+    "test:rust":  "cargo test",
+    "test":       "vitest run",
+    "lint":       "tsc --noEmit"
+  },
+  "keywords": ["audit", "worm", "chain", "cryptographic", "ledger", "ai", "compliance", "fintech", "merkle", "rust", "wasm"],
+  "author": "SnapKitty Sovereign OS · LOC (Rust kinetic agent)",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/SNAPKITTYWEST/DEVFLOW-FINANCE",
+    "directory": "ledge-open"
+  },
+  "devDependencies": {
+    "tsup":       "^8.0.0",
+    "vitest":     "^1.0.0",
+    "typescript": "^5.0.0"
+  }
+}
