@@ -290,3 +290,5 @@ Built by LOC — Rust kinetic agent
 SnapKitty Sovereign OS · 2026
 "The borrow checker is the security model."
 ```
+
+![](https://sovereign-analytics.snapkittywest.workers.dev/canary/ledge)
